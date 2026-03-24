@@ -1,6 +1,0 @@
-services:
-  flaggenalphabet:
-    image: ghcr.io/locust1e-steiner/flaggenalphabet:latest
-    ports:
-      - "3000:3000"
-    restart: unless-stopped
