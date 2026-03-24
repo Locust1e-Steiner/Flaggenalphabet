@@ -99,6 +99,12 @@
       <button class="continent-btn" data-continent="south_america">🌎 Südamerika</button>
     </nav>
 
+    <!-- Europa Sub-Navigation (nur sichtbar wenn Europa aktiv) -->
+    <nav id="europe-subnav" class="europe-subnav hidden">
+      <button class="subnav-btn active" data-subnav="countries">🌐 Europäische Länder</button>
+      <button class="subnav-btn" data-subnav="bundeslaender">🇩🇪 Bundesländer (Deutschland)</button>
+    </nav>
+
     <!-- Suche -->
     <div class="country-search-bar">
       <input type="text" id="country-search"
@@ -126,6 +132,9 @@
   <script src="js/app.js"></script>
   <!-- Länderflaggen -->
   <script src="js/africa-data.js"></script>
+  <script src="js/southamerica-data.js"></script>
+  <script src="js/europe-data.js"></script>
+  <script src="js/germany-states-data.js"></script>
   <script src="js/country-app.js"></script>
 
 </body>

@@ -266,6 +266,57 @@ header {
    LÄNDERFLAGGEN-SEKTION
 ════════════════════════════════════════════════════════ */
 
+/* ── Europa Sub-Navigation (Länder / Bundesländer) ──── */
+.europe-subnav {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  background: #f0f4ff;
+  border-bottom: 2px solid #c8d6f8;
+  flex-wrap: wrap;
+}
+.subnav-btn {
+  padding: .4rem 1.1rem;
+  border: 2px solid #c8d6f8;
+  border-radius: 18px;
+  background: white;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: .88rem;
+  font-weight: 500;
+  transition: all .2s;
+}
+.subnav-btn:hover  { border-color: var(--blue); background: #e8f0ff; }
+.subnav-btn.active { background: var(--blue); color: white; border-color: var(--blue); }
+
+/* Button im Modal: "Bundesländer anzeigen" */
+.cmodal-subview-btn {
+  display: block;
+  width: 100%;
+  margin: .6rem 0 1rem;
+  padding: .6rem 1rem;
+  background: #f0f4ff;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+  color: var(--blue);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+  text-align: center;
+}
+.cmodal-subview-btn:hover { background: var(--blue); color: white; }
+
+/* Bundesland-Flaggen: object-fit contain statt cover */
+.state-flag-wrap img { object-fit: contain !important; background: #f5f5f5; }
+.flag-fallback {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; font-weight: 700; color: var(--muted);
+  background: #f0f0f0;
+}
+
 /* ── Kontinent-Navigation ────────────────────────────── */
 .continent-nav {
   display: flex;
