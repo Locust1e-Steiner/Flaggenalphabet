@@ -9,6 +9,9 @@ on:
       - Europa
       - Nordamerika
       - Südamerika
+    # Semantic Versioning: Tag pushen z.B. v1.0.0 → Image :v1.0.0
+    tags:
+      - 'v*.*.*'
   workflow_dispatch:
 
 env:
@@ -39,11 +42,14 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            # latest nur auf dem main Branch
+            # Semantic Version: v1.2.3 → :v1.2.3 und :v1.2
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            # latest nur auf main
             type=raw,value=latest,enable={{is_default_branch}}
-            # Branch-Name als Tag (z.B. "Afrika", "Asien" …)
+            # Branch-Name (z.B. "Afrika", "Südamerika")
             type=ref,event=branch
-            # SHA-Tag für jede Revision (eindeutig nachvollziehbar)
+            # SHA für jede Revision
             type=sha,prefix=sha-
 
       - name: Build and push Docker image
