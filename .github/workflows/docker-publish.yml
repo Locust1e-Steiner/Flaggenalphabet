@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+      - Afrika
+      - Asien
+      - Europa
+      - Nordamerika
+      - Südamerika
   workflow_dispatch:
 
 env:
@@ -34,8 +39,12 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=sha,prefix=sha-
+            # latest nur auf dem main Branch
             type=raw,value=latest,enable={{is_default_branch}}
+            # Branch-Name als Tag (z.B. "Afrika", "Asien" …)
+            type=ref,event=branch
+            # SHA-Tag für jede Revision (eindeutig nachvollziehbar)
+            type=sha,prefix=sha-
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
