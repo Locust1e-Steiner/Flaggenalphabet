@@ -12,7 +12,11 @@ const CONTINENT_DATA = {
   asia:          { label: 'Asien',        data: [], available: false },
   europe:        { label: 'Europa',       data: [], available: false },
   north_america: { label: 'Nordamerika',  data: [], available: false },
-  south_america: { label: 'Südamerika',   data: [], available: false }
+  south_america: {
+    label: 'Südamerika',
+    data: typeof SOUTH_AMERICA_COUNTRIES !== 'undefined' ? SOUTH_AMERICA_COUNTRIES : [],
+    available: true
+  }
 };
 
 /* ── State ──────────────────────────────────────────── */
