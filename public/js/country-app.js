@@ -16,7 +16,11 @@ const CONTINENT_DATA = {
     data: typeof EUROPE_COUNTRIES !== 'undefined' ? EUROPE_COUNTRIES : [],
     available: true
   },
-  north_america: { label: 'Nordamerika', data: [], available: false },
+  north_america: {
+    label: 'Nordamerika',
+    data: typeof NORTH_AMERICA_COUNTRIES !== 'undefined' ? NORTH_AMERICA_COUNTRIES : [],
+    available: true
+  },
   south_america: {
     label: 'Südamerika',
     data: typeof SOUTH_AMERICA_COUNTRIES !== 'undefined' ? SOUTH_AMERICA_COUNTRIES : [],
