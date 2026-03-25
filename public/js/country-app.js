@@ -207,7 +207,7 @@ function renderUSStates() {
     return;
   }
 
-  countriesGrid.innerHTML = list.map((s, i) => `
+  countriesGrid.innerHTML = list.map(s => `
     <div class="country-card" data-us-state-index="${states.indexOf(s)}" role="button" tabindex="0"
          aria-label="${s.name}">
       <div class="country-flag-wrap state-flag-wrap">
