@@ -99,10 +99,26 @@
       <button class="continent-btn" data-continent="south_america">🌎 Südamerika</button>
     </nav>
 
-    <!-- Europa Sub-Navigation (nur sichtbar wenn Europa aktiv) -->
+    <!-- Asien Sub-Navigation -->
+    <nav id="asia-subnav" class="europe-subnav hidden">
+      <button class="subnav-btn active" data-subnav="countries">🌏 Alle Länder</button>
+      <button class="subnav-btn" data-subnav="china_provinces">🇨🇳 Provinzen (China)</button>
+      <button class="subnav-btn" data-subnav="india_states">🇮🇳 Bundesstaaten (Indien)</button>
+    </nav>
+
+    <!-- Europa Sub-Navigation -->
     <nav id="europe-subnav" class="europe-subnav hidden">
       <button class="subnav-btn active" data-subnav="countries">🌐 Europäische Länder</button>
       <button class="subnav-btn" data-subnav="bundeslaender">🇩🇪 Bundesländer (Deutschland)</button>
+    </nav>
+
+    <!-- Nordamerika Sub-Navigation -->
+    <nav id="north-america-subnav" class="europe-subnav hidden">
+      <button class="subnav-btn active" data-subnav="countries">🌎 Alle Länder</button>
+      <button class="subnav-btn" data-subnav="us_states">🇺🇸 Bundesstaaten (USA)</button>
+      <button class="subnav-btn" data-subnav="canada_provinces">🍁 Provinzen (Kanada)</button>
+      <button class="subnav-btn" data-subnav="central_america">🌴 Mittelamerika</button>
+      <button class="subnav-btn" data-subnav="caribbean">🏝 Karibik</button>
     </nav>
 
     <!-- Suche -->
@@ -132,10 +148,13 @@
   <script src="js/app.js"></script>
   <!-- Länderflaggen -->
   <script src="js/africa-data.js"></script>
-  <script src="js/asia-data.js"></script>
   <script src="js/southamerica-data.js"></script>
   <script src="js/europe-data.js"></script>
   <script src="js/germany-states-data.js"></script>
+  <script src="js/northamerica-data.js"></script>
+  <script src="js/asia-data.js"></script>
+  <script src="js/china-provinces-data.js"></script>
+  <script src="js/india-states-data.js"></script>
   <script src="js/country-app.js"></script>
 
 </body>
