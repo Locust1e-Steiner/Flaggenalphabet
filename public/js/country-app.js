@@ -50,8 +50,13 @@ const countryModal        = document.getElementById('country-modal');
 const countryModalBody    = document.getElementById('country-modal-body');
 const europeSubnav        = document.getElementById('europe-subnav');
 <<<<<<< HEAD
+<<<<<<< HEAD
 const northAmericaSubnav  = document.getElementById('north-america-subnav');
 const australiaSubnav     = document.getElementById('australia-subnav');
+=======
+const asiaSubnav          = document.getElementById('asia-subnav');
+const northAmericaSubnav  = document.getElementById('north-america-subnav');
+>>>>>>> Asien
 =======
 const asiaSubnav          = document.getElementById('asia-subnav');
 const northAmericaSubnav  = document.getElementById('north-america-subnav');
@@ -77,7 +82,10 @@ function updateSubnav() {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Asien
   if (asiaSubnav) {
     if (activeContinent === 'asia' && CONTINENT_DATA.asia.available) {
       asiaSubnav.classList.remove('hidden');
@@ -85,6 +93,9 @@ function updateSubnav() {
       asiaSubnav.classList.add('hidden');
     }
   }
+<<<<<<< HEAD
+>>>>>>> Asien
+=======
 >>>>>>> Asien
   if (northAmericaSubnav) {
     if (activeContinent === 'north_america' && CONTINENT_DATA.north_america.available) {
@@ -93,6 +104,7 @@ function updateSubnav() {
       northAmericaSubnav.classList.add('hidden');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   if (australiaSubnav) {
     if (activeContinent === 'australia' && CONTINENT_DATA.australia.available) {
@@ -100,6 +112,8 @@ function updateSubnav() {
     } else {
       australiaSubnav.classList.add('hidden');
     }
+=======
+>>>>>>> Asien
 =======
 >>>>>>> Asien
   }
@@ -121,7 +135,10 @@ function renderCountriesGrid() {
 
   // Unteransichten
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Asien
   if (activeContinent === 'asia' && activeSubview === 'china_provinces') {
     renderChinaProvinces();
     return;
@@ -130,6 +147,9 @@ function renderCountriesGrid() {
     renderIndiaStates();
     return;
   }
+<<<<<<< HEAD
+>>>>>>> Asien
+=======
 >>>>>>> Asien
   if (activeContinent === 'europe' && activeSubview === 'bundeslaender') {
     renderBundeslaender();
@@ -152,10 +172,13 @@ function renderCountriesGrid() {
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (activeContinent === 'australia' && activeSubview === 'australia_states') {
     renderAustraliaStates();
     return;
   }
+=======
+>>>>>>> Asien
 =======
 >>>>>>> Asien
 
@@ -325,7 +348,10 @@ function renderCanadaProvinces() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Asien
 /* ── China-Provinzen-Grid ────────────────────────────── */
 function renderChinaProvinces() {
   const provinces = typeof CHINA_PROVINCES !== 'undefined' ? CHINA_PROVINCES : [];
@@ -400,6 +426,9 @@ function renderIndiaStates() {
   });
 }
 
+<<<<<<< HEAD
+>>>>>>> Asien
+=======
 >>>>>>> Asien
 /* ── Mittelamerika-Grid ──────────────────────────────── */
 function renderCentralAmerica() {
@@ -478,7 +507,10 @@ function renderCaribbean() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Asien
 /* ── China-Provinz-Modal ─────────────────────────────── */
 function openChinaProvinceModal(index) {
   const provinces = typeof CHINA_PROVINCES !== 'undefined' ? CHINA_PROVINCES : [];
@@ -589,6 +621,9 @@ function openIndiaStateModal(index) {
   document.getElementById('country-modal-close').focus();
 }
 
+<<<<<<< HEAD
+>>>>>>> Asien
+=======
 >>>>>>> Asien
 /* ── US-Bundesstaat-Modal ────────────────────────────── */
 function openUSStateModal(index) {
@@ -703,6 +738,7 @@ function openCanadaProvinceModal(index) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* ── Australische Bundesstaaten-Grid ────────────────── */
 function renderAustraliaStates() {
   const states = typeof AUSTRALIA_STATES !== 'undefined' ? AUSTRALIA_STATES : [];
@@ -804,11 +840,16 @@ function switchToAustraliaSubview(subview) {
   activeSubview = subview;
   document.querySelectorAll('#australia-subnav .subnav-btn').forEach(b => {
 =======
+=======
+>>>>>>> Asien
 /* ── Zu Nordamerika-Unteransicht wechseln (aus Modal) ── */
 function switchToAsiaSubview(subview) {
   closeCountryModal();
   activeSubview = subview;
   document.querySelectorAll('#asia-subnav .subnav-btn').forEach(b => {
+<<<<<<< HEAD
+>>>>>>> Asien
+=======
 >>>>>>> Asien
     b.classList.toggle('active', b.dataset.subnav === subview);
   });
@@ -818,7 +859,10 @@ function switchToAsiaSubview(subview) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* ── Zu Nordamerika-Unteransicht wechseln (aus Modal) ── */
+=======
+>>>>>>> Asien
 =======
 >>>>>>> Asien
 function switchToNorthAmericaSubview(subview) {
@@ -839,6 +883,7 @@ function openCountryModal(code) {
 
   let subviewFn = 'switchToBundeslaender()';
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (activeContinent === 'north_america' && country.subviewKey) {
     subviewFn = `switchToNorthAmericaSubview('${country.subviewKey}')`;
   }
@@ -846,11 +891,16 @@ function openCountryModal(code) {
     subviewFn = `switchToAustraliaSubview('${country.subviewKey}')`;
   }
 =======
+=======
+>>>>>>> Asien
   if (activeContinent === 'asia' && country.subviewKey) {
     subviewFn = `switchToAsiaSubview('${country.subviewKey}')`;
   } else if (activeContinent === 'north_america' && country.subviewKey) {
     subviewFn = `switchToNorthAmericaSubview('${country.subviewKey}')`;
   }
+<<<<<<< HEAD
+>>>>>>> Asien
+=======
 >>>>>>> Asien
   const subviewBtn = country.hasSubview ? `
     <button class="cmodal-subview-btn" onclick="${subviewFn}">
@@ -1013,7 +1063,11 @@ document.querySelectorAll('.continent-btn').forEach(btn => {
 
 /* ── Sub-Navigation (Europa & Nordamerika) ───────────── */
 <<<<<<< HEAD
+<<<<<<< HEAD
 document.querySelectorAll('#europe-subnav .subnav-btn, #north-america-subnav .subnav-btn, #australia-subnav .subnav-btn').forEach(btn => {
+=======
+document.querySelectorAll('#asia-subnav .subnav-btn, #europe-subnav .subnav-btn, #north-america-subnav .subnav-btn').forEach(btn => {
+>>>>>>> Asien
 =======
 document.querySelectorAll('#asia-subnav .subnav-btn, #europe-subnav .subnav-btn, #north-america-subnav .subnav-btn').forEach(btn => {
 >>>>>>> Asien
