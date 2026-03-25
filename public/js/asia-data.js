@@ -107,7 +107,10 @@ const ASIA_COUNTRIES = [
     currency: 'Renminbi / Chinesischer Yuan (CNY)',
     area: 9596960,
     region: 'Ostasien',
-    note: 'Zweitgrößte Volkswirtschaft der Welt; ständiges Mitglied des UN-Sicherheitsrates; Heimat von mehr als 5.000 Jahren kontinuierlicher Zivilisation.'
+    note: 'Zweitgrößte Volkswirtschaft der Welt; ständiges Mitglied des UN-Sicherheitsrates; Heimat von mehr als 5.000 Jahren kontinuierlicher Zivilisation.',
+    hasSubview: true,
+    subviewKey: 'china_provinces',
+    subviewLabel: '🗺 Alle Provinzen & Regionen anzeigen'
   },
   {
     name: 'Georgien',
@@ -133,7 +136,10 @@ const ASIA_COUNTRIES = [
     currency: 'Indische Rupie (INR)',
     area: 3287263,
     region: 'Südasien',
-    note: 'Bevölkerungsreichstes Land der Welt seit 2023; größte Demokratie der Welt; fünftgrößte Volkswirtschaft; 22 anerkannte Amtssprachen.'
+    note: 'Bevölkerungsreichstes Land der Welt seit 2023; größte Demokratie der Welt; fünftgrößte Volkswirtschaft; 22 anerkannte Amtssprachen.',
+    hasSubview: true,
+    subviewKey: 'india_states',
+    subviewLabel: '🗺 Alle Bundesstaaten & Territorien anzeigen'
   },
   {
     name: 'Indonesien',
