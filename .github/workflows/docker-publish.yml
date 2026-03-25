@@ -9,6 +9,7 @@ on:
       - Europa
       - Nordamerika
       - Südamerika
+      - Australien
   workflow_dispatch:
 
 env:
