@@ -97,12 +97,28 @@
       <button class="continent-btn" data-continent="europe">🌐 Europa</button>
       <button class="continent-btn" data-continent="north_america">🌎 Nordamerika</button>
       <button class="continent-btn" data-continent="south_america">🌎 Südamerika</button>
+      <button class="continent-btn" data-continent="australia">🦘 Australien</button>
     </nav>
 
-    <!-- Europa Sub-Navigation (nur sichtbar wenn Europa aktiv) -->
+    <!-- Europa Sub-Navigation -->
     <nav id="europe-subnav" class="europe-subnav hidden">
       <button class="subnav-btn active" data-subnav="countries">🌐 Europäische Länder</button>
       <button class="subnav-btn" data-subnav="bundeslaender">🇩🇪 Bundesländer (Deutschland)</button>
+    </nav>
+
+    <!-- Nordamerika Sub-Navigation -->
+    <nav id="north-america-subnav" class="europe-subnav hidden">
+      <button class="subnav-btn active" data-subnav="countries">🌎 Alle Länder</button>
+      <button class="subnav-btn" data-subnav="us_states">🇺🇸 Bundesstaaten (USA)</button>
+      <button class="subnav-btn" data-subnav="canada_provinces">🍁 Provinzen (Kanada)</button>
+      <button class="subnav-btn" data-subnav="central_america">🌴 Mittelamerika</button>
+      <button class="subnav-btn" data-subnav="caribbean">🏝 Karibik</button>
+    </nav>
+
+    <!-- Australien Sub-Navigation -->
+    <nav id="australia-subnav" class="europe-subnav hidden">
+      <button class="subnav-btn active" data-subnav="countries">🌏 Australien</button>
+      <button class="subnav-btn" data-subnav="australia_states">🏛 Bundesstaaten &amp; Territorien</button>
     </nav>
 
     <!-- Suche -->
@@ -136,6 +152,8 @@
   <script src="js/southamerica-data.js"></script>
   <script src="js/europe-data.js"></script>
   <script src="js/germany-states-data.js"></script>
+  <script src="js/northamerica-data.js"></script>
+  <script src="js/australia-data.js"></script>
   <script src="js/country-app.js"></script>
 
 </body>
