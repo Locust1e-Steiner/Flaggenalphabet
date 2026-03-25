@@ -828,7 +828,7 @@ const USA_STATES = [
     area: 24906,
     region: 'Nordosten',
     flagUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Vermont.svg',
-    note: 'Zweitbevölkerungsärmster Bundesstaat. Heimat von Ben & Jerry's Ice Cream. Bekannt für Ahornsirupproduktion (größter Produzent der USA) und bunte Herbstlandschaften.'
+    note: 'Zweitbevölkerungsärmster Bundesstaat. Heimat von Ben & Jerry\'s Ice Cream. Bekannt für Ahornsirupproduktion (größter Produzent der USA) und bunte Herbstlandschaften.'
   },
   {
     name: 'Virginia',
