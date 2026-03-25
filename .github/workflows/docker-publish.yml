@@ -6,9 +6,12 @@ on:
       - main
       - Afrika
       - Asien
+      - Australien
       - Europa
       - Nordamerika
       - Südamerika
+    tags:
+      - 'v*.*.*'
   workflow_dispatch:
 
 env:
@@ -39,6 +42,9 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
+            # Semantische Versionierung (z.B. v1.2.3 → :v1.2.3 und :v1.2)
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
             # latest nur auf dem main Branch
             type=raw,value=latest,enable={{is_default_branch}}
             # Branch-Name als Tag (z.B. "Afrika", "Asien" …)
