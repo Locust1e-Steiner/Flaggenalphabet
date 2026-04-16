@@ -6,10 +6,7 @@ const PORT = 3000;
 
 // Primär aus public/ servieren
 app.use(express.static(path.join(__dirname, 'public')));
-<<<<<<< HEAD
-=======
 // Fallback: root js/ für flags-data.js und app.js (ICS Maritim)
->>>>>>> Südamerika
 app.use('/js', express.static(path.join(__dirname, 'js')));
 
 app.get('*', (req, res) => {
