@@ -149,6 +149,39 @@
   </div><!-- /countries-section -->
 
 
+  <!-- ══════════════════════════════════════════════════
+       REEDEREIEN-SEKTION
+  ══════════════════════════════════════════════════ -->
+  <div id="reedereien-section" class="hidden">
+
+    <!-- Region-Filter -->
+    <nav id="reederei-region-nav" class="europe-subnav">
+      <button class="subnav-btn active" data-region="all">🌐 Alle</button>
+      <button class="subnav-btn" data-region="europa">🌍 Europa</button>
+      <button class="subnav-btn" data-region="asien">🌏 Asien</button>
+    </nav>
+
+    <!-- Suche -->
+    <div class="country-search-bar">
+      <input type="text" id="reederei-search"
+             placeholder="Reederei, Land oder Flaggenstaat suchen …" />
+      <span id="reederei-count"></span>
+    </div>
+
+    <!-- Reedereien-Grid -->
+    <div id="reedereien-grid" class="reedereien-grid"></div>
+
+    <!-- Reederei-Modal -->
+    <div id="reederei-modal" class="modal-overlay hidden">
+      <div class="cmodal-box">
+        <button id="reederei-modal-close" class="modal-close-btn" aria-label="Schließen">✕</button>
+        <div id="reederei-modal-body"></div>
+      </div>
+    </div>
+
+  </div><!-- /reedereien-section -->
+
+
   <!-- ── Scripts ──────────────────────────────────── -->
   <!-- ICS Flaggenalphabet -->
   <script src="js/flags-data.js"></script>
@@ -164,6 +197,9 @@
   <script src="js/india-states-data.js"></script>
   <script src="js/australia-data.js"></script>
   <script src="js/country-app.js"></script>
+  <!-- Reedereien -->
+  <script src="js/reederei-data.js"></script>
+  <script src="js/reederei-app.js"></script>
 
 </body>
 </html>
