@@ -12,6 +12,7 @@
   --radius:  10px;
   --shadow:  0 2px 10px rgba(0,0,0,.10);
   --green:   #1a7340;
+  --teal:    #007a87;
 }
 
 /* ── Reset & Base ────────────────────────────────────── */
@@ -548,6 +549,149 @@ header {
 .coming-soon h3   { font-size: 1.3rem; color: var(--text); margin-bottom: .5rem; }
 .no-results { color: var(--muted); padding: 2rem; text-align: center; }
 
+/* ════════════════════════════════════════════════════════
+   REEDEREIEN-SEKTION
+════════════════════════════════════════════════════════ */
+
+/* ── Reedereien-Grid ─────────────────────────────────── */
+.reedereien-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 1400px;
+  margin: 1.25rem auto 0;
+  padding: 0 1rem 3rem;
+}
+
+/* ── Reederei-Karte ──────────────────────────────────── */
+.reederei-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+  display: flex;
+  flex-direction: column;
+}
+.reederei-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--teal);
+}
+.reederei-flag-wrap {
+  width: 100%;
+  height: 110px;
+  background: #1a2a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.reederei-flag-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.reederei-card-info {
+  padding: .7rem .85rem .85rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.reederei-card-name {
+  font-weight: 700;
+  font-size: .93rem;
+  color: var(--text);
+  line-height: 1.3;
+}
+.reederei-card-country {
+  font-size: .8rem;
+  color: var(--muted);
+}
+.reederei-card-meta {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+  margin-top: .2rem;
+}
+
+/* ── Badges auf der Karte ────────────────────────────── */
+.fleet-size-badge {
+  display: inline-block;
+  background: #e6f4f6;
+  color: var(--teal);
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .2rem .6rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.specialization-badge {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .2rem .6rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.spec-container  { background: #e8f0ff; color: var(--blue); }
+.spec-gemischt   { background: #fff3e0; color: #b45309; }
+.spec-kreuzfahrt { background: #fce4ec; color: #b71c6a; }
+
+/* ── Region-Badge im Modal ───────────────────────────── */
+.reederei-badge {
+  background: #e6f4f6 !important;
+  color: var(--teal) !important;
+}
+
+/* ── Flaggenstaaten-Tags im Modal ────────────────────── */
+.flag-states-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .2rem;
+}
+.flag-state-tag {
+  display: inline-block;
+  background: #f0f4ff;
+  color: var(--blue);
+  font-size: .8rem;
+  padding: .15rem .55rem;
+  border-radius: 10px;
+  border: 1px solid #c8d6f8;
+}
+
+/* ── Schiffstypen-Tabelle im Modal ───────────────────── */
+.ship-type-section {
+  margin-top: 1rem;
+}
+.ship-type-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+}
+.ship-type-table th,
+.ship-type-table td {
+  padding: .45rem .7rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.ship-type-table th {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+  background: #f8f9fb;
+}
+.ship-type-table td.ship-count {
+  font-weight: 600;
+  color: var(--teal);
+  text-align: right;
+}
+.ship-type-table tr:last-child td { border-bottom: none; }
+
 /* ── Utility ─────────────────────────────────────────── */
 .hidden { display: none !important; }
 
@@ -558,6 +702,7 @@ header {
 @media (max-width: 600px) {
   #flags-grid         { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: .7rem; }
   .countries-grid     { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .7rem; }
+  .reedereien-grid    { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .7rem; }
   #quiz-options       { grid-template-columns: 1fr; }
   #modal              { padding: 1.25rem; }
   #modal-flag-svg svg { width: 140px; }
